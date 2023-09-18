@@ -1,0 +1,38 @@
+interface Resume {
+void biodata(); }
+class Teacher implements Resume {
+String name;
+String age;
+String address;
+String qualification;
+String experience;
+String achievements;
+Teacher(String name, String age, String address, String qualification, String experience,
+String achievements) {
+this.name = name;
+this.age = age;
+this.address = address; this.qualification = qualification; this.experience = experience; this.achievements = achievements;
+}
+public void biodata() {
+System.out.println("TEACHER RESUME"); System.out.println("Name: " + name); System.out.println("Age: " + age); System.out.println("Address: " + address); System.out.println("Qualification: " + qualification); System.out.println("Experience: " + experience); System.out.println("Achievements: " + achievements);
+} }
+class Student implements Resume {
+String name; String age; String address; String results; String discipline;
+Student(String name, String age, String address, String results, String discipline) {
+this.name = name;
+this.age = age;
+this.address = address; this.results = results; this.discipline = discipline;
+}
+public void biodata() {
+System.out.println("STUDENT RESUME"); System.out.println("Name: " + name); System.out.println("Age: " + age); System.out.println("Address: " + address); System.out.println("Results: " + results); System.out.println("Discipline: " + discipline);
+} }
+public class TestResume
+{
+public static void main(String[] args)
+{
+Teacher t1 = new Teacher("John Doe", "35", "123 Main St", "Masters in Education", "10 years", "Teacher of the Year Award");
+t1.biodata();
+
+Student s1 = new Student("Jane Smith", "22", "456 Park Ave", "GPA: 3.8", "Computer Science");
+s1.biodata(); }
+}
