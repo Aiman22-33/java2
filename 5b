@@ -1,0 +1,17 @@
+public class COverloading {
+int id;
+String name; COverloading( )
+{
+System.out.println("This is Default constructor"); System.out.println("Student Id : "+id + "\nStudent Name : "+name); }
+COverloading(int i, String n)
+{
+System.out.println("This is Parameterized Constructor:");
+id = i;
+name = n;
+System.out.println("Student Id : "+id + "\nStudent Name : "+name); }
+public static void main(String[] args)
+{
+COverloading s = new COverloading();
+COverloading student = new COverloading(10, "David");
+}
+}
