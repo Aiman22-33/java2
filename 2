@@ -1,0 +1,44 @@
+import java.io.*; class Student
+{
+String usn, name, branch; long ph;
+Student()
+{
+usn = name = branch = "No value";
+ph = 0;
+}
+void read_data(String u, String n, String b, long m) {
+usn = u; name = n; branch = b; ph =m;
+}
+void display()
+{
+System.out.println(usn + "\t" + name + "\t" + branch + "\t\t" + ph); }
+}
+class Record {
+public static void main(String args[]) throws IOException {
+String u, n, b;
+long m;
+int no;
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); System.out.print("Enter number of records:");
+no = Integer.parseInt(br.readLine());
+Student[] s = new Student[no];
+for(int i=0; i<s.length;i++)
+ 
+{
+System.out.println("\nEnter Student " + (i + 1) + " record");
+s[i] = new Student();
+System.out.print("Enter student USN: ");
+u = br.readLine();
+System.out.print("Enter student Name: ");
+n = br.readLine();
+System.out.print("Enter student Branch: ");
+b = br.readLine();
+System.out.print("Enter student Phone number: ");
+m = Long.parseLong(br.readLine());
+s[i].read_data(u, n, b, m);
+}
+System.out.println("USN \t NAME \t BRANCH \t PHONE NO"); for(int i=0; i<s.length;i++)
+{
+s[i].display();
+}
+}
+}
